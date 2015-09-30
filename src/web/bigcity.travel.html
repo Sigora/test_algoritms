@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <title></title>
 </head>
+
 <style>
+    @font-face { font-family: merriweatheritalic; src: url('fonts/Merriweather-Italic.ttf'); }
     * {
         margin: 0px;
         padding: 0px;
@@ -21,15 +23,6 @@
         position:absolute;
         min-height:100%;
         min-width:100%;
-    }
-    div.second_section {
-        background: url("http://www.bigcity.travel/wp-content/uploads/2015/07/resplendent_menu-image.jpg");
-        display: block;
-        position:absolute;
-        min-width:100%;
-        height:100px;
-        background-position: center center;
-        min-height: 26.7857em;
     }
     div.first_text {
         position:relative;
@@ -49,16 +42,76 @@
         width:100%;
     }
 
-    a.create_expirience{
-        margin-top: 2.85714em;
-        border: 1px solid #d19e77;
-        padding: 10px;
-        text-transform: uppercase;
-        box-shadow: 5px 5px rgba(0, 0, 0, 0);
-        color:#d19e77;
-        text-decoration: none;
+    div.first_underline p{
+        font-family:'merriweatheritalic', Palatino, serif;
     }
 
+    a.create_expirience{
+        position:relative;
+        border: 1px solid #d19e77;
+        padding: 15px;
+        text-transform: uppercase;
+        color:#d19e77;
+        text-decoration: none;
+        min-width: 10.7143em;
+    }
+    a.create_expirience:hover{
+        background-color: #d19e77;
+        color:#fff;
+    }
+    a.create_expirience:hover::before{
+        border:none;
+    }
+    a.create_expirience:hover::after{
+        border:none;
+    }
+    a.create_expirience::before {
+        content: "";
+        display: block;
+        border-style: solid;
+        border-color: #D19E77;
+        -moz-border-top-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        border-image: none;
+        border-width: 0px 0px 1px 1px;
+        width: 100%;
+        height: 0.42857em;
+        position: absolute;
+        left: 0.35714em;
+        bottom: -0.5em;
+    }
+    a.create_expirience::after {
+        content: "";
+        display: block;
+        border-style: solid;
+        border-color: #D19E77;
+        -moz-border-top-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        border-image: none;
+        border-width: 1px 1px 0px 0px;
+        width: 0.42857em;
+        height: 100%;
+        position: absolute;
+        top: 0.42857em;
+        right: -0.5em;
+    }
+    div.second_section {
+        background: url("http://www.bigcity.travel/wp-content/uploads/2015/07/resplendent_menu-image.jpg");
+        display: block;
+        position:relative;
+        min-width:100%;
+        height:100px;
+        background-position: center center;
+        min-height: 26.7857em;
+        filter: grayscale(100%);
+    }
+    div.second_section:hover{
+        filter: unset;
+    }
 </style>
 <body >
 <div style="height:100vh;overflow: hidden;background-image: url('http://www.bigcity.travel/wp-content/uploads/2015/07/Layer-314.jpg')">
@@ -66,14 +119,14 @@
     <div class="first_text">
         <div style="" class="first_text_title">
             <div  class="first_text_inner">
-                <img style="width:10.71429em;margin-bottom: 40px;" src="http://www.bigcity.travel/wp-content/themes/bigcity/assets/images/logo.png">
+                <img style="width:10.71429em;margin-bottom: 60px;" src="http://www.bigcity.travel/wp-content/themes/bigcity/assets/images/logo.png">
                 <span style="text-transform:uppercase;color:#fff;display:block;">Welcome to</span>
                 <h1 style="text-transform: uppercase;font-weight: normal;line-height: 1em;font-size: 27px; margin-bottom: 30px;"><span style="font-weight: bold;font-size: 27px;">Big</span>City luxury travel services</h1>
             </div>
             <div class="first_text_title" style="border-top: 2px solid #d19e77;position:relative; width:47%; margin-bottom: 30px;"></div>
-            <div>
-                <p style="font-family:'merriweatheritalic', Palatino, serif;color: #d19e77;font-size: 1.14286em; margin-bottom: 30px;">Ultimate personal service, from start to finish...</p>
-                <p style="font-size: 1.14286em;margin-bottom: 30px;">We customise extraordinary Cape Town travel experiences through the closest possible<br>
+            <div class="first_underline">
+                <p style="color: #d19e77;font-size: 1.14286em; margin-bottom: 20px;">Ultimate personal service, from start to finish...</p>
+                <p style="font-size: 1.14286em;margin-bottom: 40px;">We customise extraordinary Cape Town travel experiences through the closest possible<br>
                     understanding of your wishes and requirements.<br>
                     Together we will create your next bespoke travel experience.</p>
                 <a href="#" class="create_expirience" style="">Create experience</a>
@@ -83,7 +136,7 @@
 </div>
 <div class="second_section">
     <div class="second_logo">
-
+        <div style="text-transform: uppercase; color:#fff; font-weight: ">Case study</div>
     </div>
 </div>
 </body>
