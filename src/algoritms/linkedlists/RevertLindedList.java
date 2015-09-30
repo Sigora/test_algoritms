@@ -1,8 +1,8 @@
-package linkedlists;
+package algoritms.linkedlists;
 
-import utilityclasses.DoublyLinkedList;
+import algoritms.utilityclasses.DoublyLinkedList;
 
-import static utilityclasses.DoublyLinkedList.*;
+import static algoritms.utilityclasses.DoublyLinkedList.*;
 
 /**
  * Created by Sigora on 06.05.2015.

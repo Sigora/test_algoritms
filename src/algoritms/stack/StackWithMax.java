@@ -1,6 +1,6 @@
-package stack;
+package algoritms.stack;
 
-import utilityclasses.Stack;
+import algoritms.utilityclasses.Stack;
 
 /**
  * Created by Sigora on 05.07.2015.

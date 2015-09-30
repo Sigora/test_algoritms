@@ -1,4 +1,4 @@
-package arrays;
+package algoritms.arrays;
 
 /**
  * Created by Sigora on 29.09.2015.

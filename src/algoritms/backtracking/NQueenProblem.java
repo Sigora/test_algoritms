@@ -1,4 +1,4 @@
-package backtracking;
+package algoritms.backtracking;
 
 /**
  * Created by Sigora on 07.07.2015.

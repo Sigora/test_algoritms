@@ -1,7 +1,4 @@
-package utilityclasses;
-
-import java.util.Arrays;
-import java.util.List;
+package algoritms.utilityclasses;
 
 /**
  * Created by Sigora on 05.05.2015.

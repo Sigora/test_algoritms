@@ -1,4 +1,4 @@
-package utilityclasses;
+package algoritms.utilityclasses;
 
 /**
  * Created by Sigora on 06.05.2015.

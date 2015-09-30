@@ -1,11 +1,11 @@
-package linkedlists;
+package algoritms.linkedlists;
 
 import org.testng.annotations.Test;
-import utilityclasses.LinkedListNode;
+import algoritms.utilityclasses.LinkedListNode;
 
 
 import static org.testng.Assert.assertEquals;
-import static utilityclasses.LinkedListNode.*;
+import static algoritms.utilityclasses.LinkedListNode.*;
 import static java.lang.System.*;
 
 /**
