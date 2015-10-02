@@ -55,7 +55,7 @@ public class SummNumbersInTwoLinkedLists {
 
         List<Stack<Integer>> listOfStacks = new LinkedList<>();
         for(LinkedList list : lists){
-            listOfStacks.
+            Stack
         }
 
         int incr = 0;
