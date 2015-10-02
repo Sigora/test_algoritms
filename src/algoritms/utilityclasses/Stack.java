@@ -48,4 +48,8 @@ public class Stack {
             node = node.getNextElement();
         }
     }
+
+    public boolean isEmpty(){
+        return length == 0 ? true : false;
+    }
 }
