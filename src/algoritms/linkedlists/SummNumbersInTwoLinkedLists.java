@@ -54,8 +54,13 @@ public class SummNumbersInTwoLinkedLists {
         boolean allListsIsEmpty = false;
 
         List<Stack<Integer>> listOfStacks = new LinkedList<>();
-        for(LinkedList list : lists){
-            Stack
+        for(LinkedList<Integer> list : lists){
+            Stack<Integer> stack = new Stack<>();
+            Iterator<Integer> iter = list.iterator();
+            while(iter.hasNext()){
+                stack.push(iter.next());
+            }
+            listOfStacks.add(stack);
         }
 
         int incr = 0;
