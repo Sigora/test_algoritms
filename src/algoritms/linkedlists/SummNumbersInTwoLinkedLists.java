@@ -14,63 +14,37 @@ public class SummNumbersInTwoLinkedLists {
     static Stack<Integer> stack2 = new Stack();
 
     public static void main(String[] args) {
-        Iterator<Integer> it1 = list1.iterator();
-        while(it1.hasNext()){
-            stack1.push(it1.next());
-        }
-        Iterator<Integer> it2 = list2.iterator();
-        while(it2.hasNext()){
-            stack2.push(it2.next());
-        }
-
-        LinkedList<Integer> result = new LinkedList();
-        Integer val1 = 0;
-        Integer val2 = 0;
-        Integer incr = 0;
-        while(!stack1.isEmpty() || !stack2.isEmpty()){
-
-            if(!stack1.isEmpty()){
-                val1 = stack1.pop();
-            }
-            if(!stack2.isEmpty()){
-                val2 = stack2.pop();
-            }
-
-            if(val1 + val2 + incr > 9){
-                result.push(val1 + val2 + incr - 10);
-                incr = 1;
-            }
-            else{
-                result.push(val1 + val2 + incr);
-                incr = 0;
-            }
-        }
-
-        System.out.println(result.toString());
+        System.out.println(sumLinkedListNumbers(list1, list2, list3));
     }
 
-    private List<Integer> sumLinkedListNumbers(LinkedList<Integer> ... lists){
+    private static List<Integer> sumLinkedListNumbers(LinkedList<Integer> ... lists){
         LinkedList<Integer> result = new LinkedList<>();
-        boolean allListsIsEmpty = false;
+
 
         List<Stack<Integer>> listOfStacks = new LinkedList<>();
-        for(LinkedList list : lists){
-            listOfStacks.
+        for(LinkedList<Integer> list : lists){
+            Stack<Integer> stack = new Stack<>();
+            Iterator<Integer> iter = list.iterator();
+            while(iter.hasNext()){
+                stack.push(iter.next());
+            }
+            listOfStacks.add(stack);
         }
 
+        boolean allListsIsEmpty = false;
         int incr = 0;
         while(!allListsIsEmpty){
             allListsIsEmpty = true;
             int sum = 0;
-            for(LinkedList<Integer> list : lists){
-                allListsIsEmpty &= list.isEmpty();
-                if(!list.isEmpty()){
-                    sum += list.iterator().next();
+            for(Stack<Integer> stack : listOfStacks){
+                allListsIsEmpty &= stack.isEmpty();
+                if(!stack.isEmpty()){
+                    sum += stack.pop();
                 }
             }
             if(sum + incr > 9){
                 result.push((sum + incr) % 10);
-                incr = (sum + incr) - (sum + incr) % 10;
+                incr = ((sum + incr) - ((sum + incr) % 10))/10;
             }
             else{
                 result.push(sum + incr);
